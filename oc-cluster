@@ -78,6 +78,7 @@ function up {
     # Just start the cluster 
     echo "$(<$OPENSHIFT_HOME_DIR/profiles/$_profile/run)"
     . $OPENSHIFT_HOME_DIR/profiles/$_profile/run "$@"
+    echo "${_profile}" > $OPENSHIFT_HOME_DIR/active_profile
   fi
 }
 
